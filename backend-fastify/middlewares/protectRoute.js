@@ -15,7 +15,7 @@ async function protectedRoute(req, res) {
     }
 
     const decoded = verify(token); 
-  // fast-jwt is synchronous
+    
     req.user = decoded;
   } catch (err) {
     console.log("pre handler - error", err);
